@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "real-time-chat-application-fe": {
+    "real-time-chat-application": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/real-time-chat-application-fe",
+            "outputPath": "dist/real-time-chat-application",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "real-time-chat-application-fe:build:production"
+              "browserTarget": "real-time-chat-application:build:production"
             },
             "development": {
-              "browserTarget": "real-time-chat-application-fe:build:development"
+              "browserTarget": "real-time-chat-application:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "real-time-chat-application-fe:build"
+            "browserTarget": "real-time-chat-application:build"
           }
         },
         "test": {
@@ -102,6 +102,6 @@
     }
   },
   "cli": {
-    "analytics": "39fa59be-e983-4a45-83ac-38860ee92b07"
+    "analytics": false
   }
 }
