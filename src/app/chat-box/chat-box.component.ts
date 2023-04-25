@@ -6,6 +6,7 @@ const SERVER_URL = 'http://localhost:3000';
 interface Message {
   text: string;
   sender: string;
+  timestamp: Date;
 }
 
 @Component({
@@ -37,7 +38,8 @@ export class ChatBoxComponent implements OnInit {
   sendMessage(): void {
     const message: Message = {
       text: this.messageText,
-      sender: this.senderName
+      sender: this.senderName,
+      timestamp: new Date()
     };
     this.socket.emit('message', message);
     this.messageText = '';

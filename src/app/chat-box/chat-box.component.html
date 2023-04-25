@@ -2,7 +2,8 @@
   <div class="chat-messages-container">
     <div *ngFor="let message of messages" class="chat-message" [ngClass]="{'chat-message-sent-by-me': message.sender === senderName}">
       <span class="chat-message-sender">{{ message.sender }}:</span>
-      <span class="chat-message-text">{{ message.text }}</span>
+      <span class="chat-message-text">{{ message.text }}</span> <br>
+      <small>{{ message.timestamp | date: 'dd/MM/yyyy HH:mm:ss' }}</small>
     </div>
   </div>
   <div class="chat-input-container">
